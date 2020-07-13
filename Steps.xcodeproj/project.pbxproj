@@ -8,18 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		592CC6FF24BCD7660031443D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592CC6FE24BCD7660031443D /* AppDelegate.swift */; };
-		592CC70224BCD7660031443D /* Steps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 592CC70024BCD7660031443D /* Steps.xcdatamodeld */; };
 		592CC70424BCD7680031443D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 592CC70324BCD7680031443D /* Assets.xcassets */; };
 		592CC70724BCD7680031443D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 592CC70524BCD7680031443D /* LaunchScreen.storyboard */; };
+		592CC71124BCD7780031443D /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592CC71024BCD7780031443D /* HealthKit.framework */; };
+		592CC71324BCD8560031443D /* StepsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592CC71224BCD8560031443D /* StepsProvider.swift */; };
+		592CC71924BCE95D0031443D /* StepListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592CC71824BCE95D0031443D /* StepListTableViewController.swift */; };
+		59E75B2424BD021F005E3FED /* StepItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E75B2324BD021F005E3FED /* StepItemTableViewCell.swift */; };
+		59E75B2724BD03CA005E3FED /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E75B2624BD03CA005E3FED /* Date+Extensions.swift */; };
+		59E75B2924BD1032005E3FED /* StepData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E75B2824BD1032005E3FED /* StepData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		592CC6FB24BCD7660031443D /* Steps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Steps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		592CC6FE24BCD7660031443D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		592CC70124BCD7660031443D /* Steps.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Steps.xcdatamodel; sourceTree = "<group>"; };
 		592CC70324BCD7680031443D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		592CC70624BCD7680031443D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		592CC70824BCD7680031443D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		592CC70E24BCD7780031443D /* Steps.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Steps.entitlements; sourceTree = "<group>"; };
+		592CC71024BCD7780031443D /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		592CC71224BCD8560031443D /* StepsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsProvider.swift; sourceTree = "<group>"; };
+		592CC71824BCE95D0031443D /* StepListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepListTableViewController.swift; sourceTree = "<group>"; };
+		59E75B2324BD021F005E3FED /* StepItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepItemTableViewCell.swift; sourceTree = "<group>"; };
+		59E75B2624BD03CA005E3FED /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		59E75B2824BD1032005E3FED /* StepData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				592CC71124BCD7780031443D /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +50,7 @@
 			children = (
 				592CC6FD24BCD7660031443D /* Steps */,
 				592CC6FC24BCD7660031443D /* Products */,
+				592CC70F24BCD7780031443D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,13 +65,58 @@
 		592CC6FD24BCD7660031443D /* Steps */ = {
 			isa = PBXGroup;
 			children = (
+				59E75B2524BD03BA005E3FED /* Utility */,
+				59E75B2224BD0213005E3FED /* Views */,
+				592CC71524BCE8F70031443D /* Model */,
+				592CC71424BCE8EB0031443D /* ViewControllers */,
+				592CC70E24BCD7780031443D /* Steps.entitlements */,
 				592CC6FE24BCD7660031443D /* AppDelegate.swift */,
 				592CC70324BCD7680031443D /* Assets.xcassets */,
 				592CC70524BCD7680031443D /* LaunchScreen.storyboard */,
 				592CC70824BCD7680031443D /* Info.plist */,
-				592CC70024BCD7660031443D /* Steps.xcdatamodeld */,
 			);
 			path = Steps;
+			sourceTree = "<group>";
+		};
+		592CC70F24BCD7780031443D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				592CC71024BCD7780031443D /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		592CC71424BCE8EB0031443D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				592CC71824BCE95D0031443D /* StepListTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		592CC71524BCE8F70031443D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				592CC71224BCD8560031443D /* StepsProvider.swift */,
+				59E75B2824BD1032005E3FED /* StepData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		59E75B2224BD0213005E3FED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				59E75B2324BD021F005E3FED /* StepItemTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		59E75B2524BD03BA005E3FED /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				59E75B2624BD03CA005E3FED /* Date+Extensions.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,8 +189,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59E75B2424BD021F005E3FED /* StepItemTableViewCell.swift in Sources */,
+				59E75B2924BD1032005E3FED /* StepData.swift in Sources */,
+				592CC71324BCD8560031443D /* StepsProvider.swift in Sources */,
+				592CC71924BCE95D0031443D /* StepListTableViewController.swift in Sources */,
+				59E75B2724BD03CA005E3FED /* Date+Extensions.swift in Sources */,
 				592CC6FF24BCD7660031443D /* AppDelegate.swift in Sources */,
-				592CC70224BCD7660031443D /* Steps.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +330,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Steps/Steps.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RHKDFU2WQ3;
 				INFOPLIST_FILE = Steps/Info.plist;
@@ -286,6 +349,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Steps/Steps.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RHKDFU2WQ3;
 				INFOPLIST_FILE = Steps/Info.plist;
@@ -322,19 +386,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		592CC70024BCD7660031443D /* Steps.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				592CC70124BCD7660031443D /* Steps.xcdatamodel */,
-			);
-			currentVersion = 592CC70124BCD7660031443D /* Steps.xcdatamodel */;
-			path = Steps.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 592CC6F324BCD7660031443D /* Project object */;
 }
